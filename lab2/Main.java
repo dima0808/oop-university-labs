@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Створенння матриць.
+        // Створення матриць.
         char[][] a = {
                 {12, 4, 8, 11},
                 {16, 9, 3, 13},
