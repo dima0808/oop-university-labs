@@ -5,6 +5,7 @@ public class Main {
 
         for (float i = a; i <= m; i++) {
             for (float j = b; j <= n; j++) {
+                // Перевірка ділення на 0.
                 if (i == -1) {
                     System.out.println("Помилка: ділення на нуль не можливе.");
                     return;
