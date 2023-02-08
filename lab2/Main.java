@@ -1,6 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
+
+        // Створенння матриць.
         char[][] a = {
                 {12, 4, 8, 11},
                 {16, 9, 3, 13},
@@ -13,21 +15,25 @@ public class Main {
         };
 
         System.out.println("Матриця A: ");
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                System.out.printf("%-4d", (byte) a[i][j]);
+        for (char[] i : a) {
+            for (char j : i) {
+                /* При виведенні елементів ми додаємо пробіли на кінці
+                цілого числа (%-4d) задля легшого читання матриці.
+                */
+                System.out.printf("%-4d", (int) j);
             }
             System.out.println();
         }
 
         System.out.println("\nМатриця B: ");
-        for (int i = 0; i < b.length; i++) {
-            for (int j = 0; j < b[i].length; j++) {
-                System.out.printf("%-4d", (byte) b[i][j]);
+        for (char[] i : b) {
+            for (char j : i) {
+                System.out.printf("%-4d", (int) j);
             }
             System.out.println();
         }
 
+        // Перевірка на те, чи є матриці однакових форм.
         if (a[0].length != b[0].length || a.length != b.length) {
             System.out.println("Матриці А і В мають різні форми.");
         } else {
@@ -37,6 +43,7 @@ public class Main {
             System.out.println("\nМатриця С: ");
             for (int i = 0; i < a.length; i++) {
                 for (int j = 0; j < a[i].length; j++) {
+
                     c[i][j] = (byte) a[i][j] ^ (byte) b[i][j];
                     sum += c[i][j];
                     System.out.printf("%-4d", c[i][j]);
