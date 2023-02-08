@@ -16,14 +16,14 @@ public class Main {
         // Створення масиву об'єктів класу Student.
         Student[] ObjArray = new Student[] {First, Second, Third, Fourth, Fifth};
 
-        // Сортуваня по алфавіту (прізвище ім'я).
+        // Сортування по алфавіту (прізвище ім'я).
         Arrays.sort(ObjArray, new Sorting.SortByAlphabet());
         System.out.println("\nСортування за алфавітом (зростання):");
         for (Student Classes : ObjArray) {
             System.out.println(Classes.lastName + " " + Classes.firstName);
         }
 
-        /* Сортуваня по віці (спадання).
+        /* Сортування по віці (спадання).
         Масив сортує масив по зростанню, але в циклі ітерація проходить навпаки,
         тим самим виводячи елементи з кінця до початку.
         */
